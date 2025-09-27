@@ -1,0 +1,292 @@
+/* Reset dasar */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+
+  /* Background utama */
+  background: #1e3a8a url("img/profil-perusahaan.png") no-repeat center center/cover;
+  color: #fff;
+
+  position: relative;
+  z-index: 0;
+}
+
+/* Overlay gradasi agar background elegan */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    rgba(30, 58, 138, 0.6),  /* biru navy transparan */
+    rgba(0, 0, 0, 0.6)       /* hitam transparan */
+  );
+  z-index: -1;
+}
+
+/* Tambah efek shadow biar teks jelas */
+h1, h2, h3, p {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* Navbar */
+header {
+  background: rgba(30, 58, 138, 0.9); /* transparan elegan */
+  padding: 10px 20px;
+  backdrop-filter: blur(6px); /* efek blur */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 24px;
+}
+/* Navbar dasar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e3a8a;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;          /* sembunyikan */
+    transition: max-height 0.4s ease; /* animasi */
+  }
+
+  .navbar ul.active {
+    max-height: 300px; /* tinggi menu muncul */
+  }
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  padding: 80px 20px;
+  background: url("img/banner.jpg") no-repeat center center/cover;
+  color: white;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* overlay gelap */
+}
+
+.banner h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.banner p {
+  position: relative;
+  z-index: 1;
+}
+
+/* Headquarter */
+.headquarter {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.headquarter h2 {
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+.locations {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  background: #2563eb;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+  background: #1e40af;
+}
+
+/* Portfolio */
+.portfolio {
+  padding: 50px 20px;
+  background: #ffffff;
+  text-align: center;
+  color: #333;
+}
+
+.portfolio h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #1e3a8a;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  color: #2563eb;
+}
+
+/* Message Form */
+.message-section {
+  padding: 50px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.message-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea,
+form button {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #1e40af;
+}
+
+#result {
+  margin-top: 20px;
+  background: #f3f4f6;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #1e3a8a;
+  color: white;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .locations {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
