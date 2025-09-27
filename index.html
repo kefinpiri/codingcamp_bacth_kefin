@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+   <header>
+  <nav class="navbar">
+   <img src="img/revo.png" alt="">
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <ul id="navMenu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#profile">Our Profile</a></li>
+      <li><a href="#message">Message Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <!-- Banner -->
+    <section id="home" class="banner">
+      <h1 id="welcome">Hi, Welcome To Website</h1>
+      <div class="img/banner-img"></div>
+    </section>
+
+    <!-- Headquarter -->
+    <section id="profile" class="headquarter">
+      <h2>Our Headquarter</h2>
+      <div class="locations">
+        <div class="circle">palu</div>
+        <div class="circle">Bandung</div>
+        <div class="circle">Surabaya</div>
+        <div class="circle">manado</div>
+      </div>
+    </section>
+
+    <!-- Message Us -->
+    <section id="message" class="message-section">
+      <h2>Message Us</h2>
+      <div class="form-container">
+        <form id="contactForm">
+          <label>Nama:</label>
+          <input type="text" id="name" required />
+
+          <label>Tanggal Lahir:</label>
+          <input type="date" id="birthdate" required />
+
+          <label>Jenis Kelamin:</label>
+          <select id="gender" required>
+            <option value="">--Pilih--</option>
+            <option value="Laki-Laki">Laki-Laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
+
+          <label>Pesan:</label>
+          <textarea id="messageText" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+
+        <div id="result">
+          <p><b>Current Time:</b> <span id="time"></span></p>
+          <p><b>Nama:</b> <span id="outName"></span>kefin</p>
+          <p><b>Tanggal Lahir:</b> <span id="outBirth">22</span></p>
+          <p><b>Jenis Kelamin:</b> <span id="outGender">laki laki</span></p>
+          <p><b>Pesan:</b> <span id="outMessage">hallo semuah saya kefin ingin belajar pemrograman</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Created by [kefin]</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
